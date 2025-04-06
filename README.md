@@ -19,4 +19,4 @@ Feel free to explore or reverse-engineer anything here — and don’t hesitate 
 
 ## 🧾 License
 
-This project is licensed under the Apache 2.0 License. See [LICENSE](../LICENSE) for details.
+This project is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE) for details.
