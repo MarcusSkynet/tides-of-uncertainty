@@ -32,4 +32,4 @@ Example:
 from .qft import QFT
 
 __all__ = ["QFT"]
-__version__ = '0.1.0'
+__version__ = '0.2.0'
