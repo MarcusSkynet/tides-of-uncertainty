@@ -1,111 +1,114 @@
 # Quantum Fourier Transform (QFT) Implementation in Qiskit
 
-This repository provides an implementation of the **Quantum Fourier Transform (QFT)** and its inverse using Qiskit. The QFT is a crucial quantum algorithm used in many quantum computing applications, including **Shor's Algorithm**, quantum phase estimation, and quantum signal processing.
+This repository provides a flexible and extensible implementation of the **Quantum Fourier Transform (QFT)** and its inverse using Qiskit. The QFT is a foundational quantum algorithm used in various quantum computing applications such as **Shor's Algorithm**, **quantum phase estimation**, and **quantum signal processing**.
+
+---
 
 ## 📌 Features
 
-- Implements **QFT and its inverse** (QFT⁻¹) on a specified number of qubits.
-- Allows optional **swap operations** for standard output ordering.
-- Can be applied **as a gate** on existing quantum circuits.
-- Debug mode available for **visualizing the QFT circuit**.
+- ✅ Implements **QFT and its inverse (QFT⁻¹)** for arbitrary numbers of qubits.
+- 🔁 Optional **qubit swaps** to reverse register order, matching classical output.
+- ⚙️ **Approximation control** for reducing circuit depth by skipping smallest-angle CP gates.
+- 🧱 Designed as a **class (`QFT`) with reusable configuration** and gate/circuit generation.
+- 🧪 Built-in **debug and visualization tools** for easier development.
+- 📐 Can output as either a **Qiskit Gate** (for `.append`) or full **QuantumCircuit** (for `.compose`).
 
 ---
 
 ## 🧠 Mathematical Concept
 
-The **Quantum Fourier Transform** (QFT) is the quantum analogue of the **Discrete Fourier Transform (DFT)**. Given an input quantum state:
+The **Quantum Fourier Transform** (QFT) is the quantum analogue of the **Discrete Fourier Transform (DFT)**. Given a quantum state:
 
-$|x\rangle = \sum_{j=0}^{N-1} x_j |j\rangle$
+$$|x\rangle = \sum_{j=0}^{N-1} x_j |j\rangle$$
 
-QFT transforms it as follows:
+The QFT maps it to:
 
-$QFT |x\rangle = \sum_{k=0}^{N-1} y_k |k\rangle$
+$$QFT |x\rangle = \sum_{k=0}^{N-1} y_k |k\rangle$$
 
-where the new coefficients are computed as:
+where:
 
-$y_k = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} x_j e^{2\pi i jk / N}$
+$$y_k = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} x_j e^{2\pi i jk / N}$$
 
-This transformation is achieved in quantum circuits using a combination of **Hadamard gates** and **controlled phase shift gates**.
-
-The inverse QFT (QFT⁻¹) negates the phase angles, reversing the transformation.
+This transformation is realized via a sequence of **Hadamard gates** and **controlled phase rotations**.
 
 ---
 
 ## ⚡ Implementation
 
-The implementation follows these steps:
+The QFT class supports the following configurable options:
 
-1. **Apply Hadamard gate** on each qubit.
-2. **Apply controlled phase shift gates** between qubits.
-3. (Optional) **Apply swap gates** to reorder qubits in standard QFT output format.
-4. Convert the constructed circuit into a **Qiskit gate**.
+1. **Hadamard gates** applied in specified qubit order (depends on inverse flag).
+2. **Controlled-phase rotations**, optionally skipping gates via `approximation_level`.
+3. **Qubit swaps** at beginning (inverse) or end (forward) to restore register order.
+4. **Optional debug visualization** and **barrier insertion** for clarity.
+5. Outputs a **Gate or full Circuit**, depending on user needs.
 
 ---
 
 ## 🚀 Usage
 
-### 1️⃣ Import and Create QFT Gate
+### 🔧 1. Import and Initialize
 
 ```python
 from QFT import QFT
+
+# Create a 4-qubit QFT gate generator
+qft = QFT(
+    num_qubits=4,
+    inverse=False,               # Optional: build inverse QFT
+    do_swaps=True,              # Optional: include swaps
+    approximation_level=1,      # Optional: skip small-angle CPs
+    debug=True,                 # Optional: show circuit
+    insert_barrier=True         # Optional: add barriers for visualization
+)
+```
+
+### 🧱 2. Use in a QuantumCircuit
+
+#### As a Gate (append):
+```python
 from qiskit import QuantumCircuit
-
-# Define number of qubits
-num_qubits = 4
-
-# Create QFT gate
-qft_gate = QFT(num_qubits)
+qc = QuantumCircuit(4)
+qc.append(qft.build(as_gate=True), range(4))
 ```
 
-### 2️⃣ Apply QFT as a Gate on an Existing Circuit
-
+#### As a Subcircuit (compose):
 ```python
-qc = QuantumCircuit(num_qubits)
-qc.append(qft_gate, range(num_qubits))
-qc.draw('mpl')  # Display circuit
+sub = qft.build(as_gate=False)
+qc = QuantumCircuit(4)
+qc = qc.compose(sub, qubits=range(4))
 ```
 
-### 3️⃣ Apply QFT to a Subset of Qubits in a Larger Circuit
+---
 
-If your circuit has more qubits than QFT requires, you can specify a subset:
-
+## 🔁 Using Inverse QFT
 ```python
-larger_qc = QuantumCircuit(6)  # Circuit with 6 qubits
-qft_subset = QFT(3)  # QFT on only 3 qubits
-larger_qc.append(qft_subset, [1, 2, 3])  # Apply to qubits 1,2,3
-larger_qc.draw('mpl')
-```
-
-### 4️⃣ Using the Inverse QFT (QFT⁻¹)
-
-To apply the inverse QFT, pass `inverse=True`:
-
-```python
-qft_inv_gate = QFT(num_qubits, inverse=True)
-qc.append(qft_inv_gate, range(num_qubits))
-qc.draw('mpl')
-```
-
-### 5️⃣ Debug Mode
-
-If `debug=True`, the circuit diagram will be displayed:
-
-```python
-QFT(4, debug=True)
+qft_inv = QFT(num_qubits=4, inverse=True)
+qc.append(qft_inv.build(), range(4))
 ```
 
 ---
 
 ## 🎯 Applications
 
-- **Shor’s Algorithm** for integer factorization.
-- **Quantum Phase Estimation** to estimate eigenvalues.
-- **Quantum Signal Processing** for wave function analysis.
+- **Shor’s Algorithm** for integer factorization
+- **Quantum Phase Estimation**
+- **Quantum Signal Processing**
+
+---
+
+## 🆕 Changelog
+
+### v2.0
+- Rewritten as a **class-based implementation**
+- Added support for **approximation level**
+- Support for **debug + barrier visualization**
+- Dual-mode return: **Gate** or **QuantumCircuit**
+- Modular, extensible design with internal helper methods
 
 ---
 
 ## 🔗 References
-
 - Nielsen & Chuang, *Quantum Computation and Quantum Information*
 - IBM Qiskit Documentation: [https://qiskit.org/documentation/](https://qiskit.org/documentation/)
 
@@ -113,11 +116,10 @@ QFT(4, debug=True)
 
 ## 💡 Contributions
 
-Feel free to contribute by improving the implementation or adding new features!
+Feel free to contribute improvements, bug fixes, or ideas!
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
-
+This project is licensed under the **Apache 2.0 License**.
