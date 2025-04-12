@@ -20,16 +20,25 @@ quantum computation through composable libraries, educational experiments, and
 algorithmic prototyping.
 
 Provides:
-    - QFT: Class-based implementation of the Quantum Fourier Transform (QFT) and its inverse,
-      with optional approximation, visualization, and flexible export.
+    - QFT: Class for constructing a Quantum Fourier Transform (QFT) or inverse QFT circuit,
+      with optional approximation, qubit swaps, barrier insertion, and debug visualization.
+
+    - QFTGate: Wrapper class to convert the circuit into a reusable Qiskit Gate,
+      suitable for composition in larger circuits.
 
 Example:
-    from .qft import QFT
-    qft = QFT(num_qubits=4)
-    gate = qft.build()
+    from qutilities.qft import QFT, QFTGate
+
+    # As circuit
+    qft = QFT(qft_qubits=4, do_swaps=True, debug=True)
+    circuit = qft.build()
+
+    # As gate
+    qft_gate = QFTGate(qft_qubits=4, inverse=True)
+    gate = qft_gate.build()
 """
 
-from .qft import QFT
+from .qft import QFT, QFTGate
 
-__all__ = ["QFT"]
+__all__ = ["QFT", "QFTGate"]
 __version__ = '0.2.0'
