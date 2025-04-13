@@ -8,38 +8,50 @@ Feel free to explore or reverse-engineer anything here — and don’t hesitate 
 
 ---
 
-## 📁 Structure
+## 🧩 Project Structure
 
-- `qutilities/`: Low-level reusable components (e.g. controlled gates, register helpers)
-- `algorithms/`: Full algorithm implementations (Shor, Grover, etc.)
-- `notebooks/`: Educational experiments, proofs-of-concept, and dynamic demos
-- `~legacy/`: Earlier code from the beginning of this quantum journey
+This repository contains both installable code and supporting research materials:
+
+- [`qutilities/`](https://github.com/MarcusSkynet/qutilities) → Modular and reusable quantum tools  
+  Includes: QFT, QPE, circuit gates, approximation layers, debug logic.
+
+- `algorithms/` → Educational demos like Deutsch-Jozsa, QPE examples, modular arithmetic
+- `notebooks/` → Walkthroughs, circuit construction lessons, testing notebooks
+- `~legacy/`: Earlier chaotic version from the beginning of my quantum journey
 
 ---
 
-## 🛠 Installation
+## 📦 Installation
 
-This repo uses a modern [PEP 517](https://peps.python.org/pep-0517/) `pyproject.toml` layout. You can install the `qutilities` package locally for use in your own notebooks or projects:
+To use the modular components (QFT, QPE, etc.), install the  
+👉 [qutilities package](https://github.com/MarcusSkynet/qutilities):
 
 ```bash
-git clone https://github.com/your-username/tides-of-uncertainty.git
-cd tides-of-uncertainty
 pip install -e .
 ```
 
-This will install the `qutilities` package in editable mode. You can then import any component like:
+> Full usage, API, and changelog live in the [qutilities README](https://github.com/MarcusSkynet/qutilities#readme).
 
-```python
-from qutilities.qft import QFT
-from qutilities.qpe import QPE, QPEGate
-```
+---
 
-Requires:
+## 🚧 About This Repository
+
+The purpose of this repo is personal and experimental — it’s a quantum sketchbook, a learning log, and an idea engine. You’ll find:
+
+- Draft code, prototype notebooks, and circuit playgrounds
+- Algorithm variations, internal test kits, functional circuit breakdowns
+- Reflections on the logic and absurdity of quantum programming
+
+---
+
+## 🛠 Requirements
+
 - Python ≥ 3.8
-- [Qiskit](https://qiskit.org/) (included in dependencies)
+- [Qiskit](https://qiskit.org/) ≥ 0.45
 
 ---
 
 ## 📜 License
 
-This project is licensed under the Apache 2.0 License. See [LICENSE](./LICENSE) for details.
+This project is licensed under the Apache 2.0 License.  
+See [LICENSE](./LICENSE) for full terms.
