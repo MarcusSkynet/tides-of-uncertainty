@@ -1,0 +1,65 @@
+/* === Quantum Refined Theme (Readable & Elegant) === */
+
+/* Overall body */
+body {
+  background: linear-gradient(to bottom, #2a053b, #150d26);
+  color: #e6e9f0;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #b78aff;
+}
+
+/* Links */
+a {
+  color: #64ffe0;
+  text-decoration: none;
+}
+a:hover {
+  color: #dda0ff;
+}
+
+/* Code blocks */
+code, pre {
+  background-color: #221633;
+  color: #8ef2ca;
+  border-left: 4px solid #3affb3;
+  padding: 0.2em 0.5em;
+}
+
+/* Footer */
+.page__footer {
+  background-color: #0c0615;
+  color: #aaa;
+}
+
+/* Header */
+.site-header {
+  background-color: rgba(21, 13, 38, 0.9);
+  border-bottom: 1px solid #3f2a55;
+}
+
+/* Nav bar background fix */
+.greedy-nav {
+  background: transparent !important;
+}
+
+/* Force header/nav text styling */
+.masthead__inner-wrap,
+.masthead__inner-wrap a,
+.masthead__inner-wrap a:visited,
+.site-title,
+.site-title a,
+.greedy-nav a,
+.site-nav .page-link {
+  color: #eae6f7 !important;
+  background: none !important;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+.masthead__inner-wrap a:hover,
+.greedy-nav a:hover,
+.site-nav .page-link:hover {
+  color: #ffdd57 !important;
+}
