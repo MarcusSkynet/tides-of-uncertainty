@@ -59,6 +59,8 @@ author:
   name   : "Marek Hubka"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Sailing Tides of Uncertainty"
+  # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with Dimensional Collapse Theory while trying to understand something else entirely. The universe is weird. So am I.
+  # Include when relevant!
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
