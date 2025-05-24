@@ -56,7 +56,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Marek Hubka"
+  name   : "Skynet"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Sailing Tides of Uncertainty"
   # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with Dimensional Collapse Theory while trying to understand something else entirely. The universe is weird. So am I.
