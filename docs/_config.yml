@@ -60,7 +60,8 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Sailing Tides of Uncertainty"
   # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with Dimensional Collapse Theory while trying to understand something else entirely. The universe is weird. So am I.
-  # Include when relevant!
+  # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with DCT while trying to understand something else entirely - It got a little out of hand. The universe is weird. So am I.
+  # Choose and include when the time is right!
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
