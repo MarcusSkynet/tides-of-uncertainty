@@ -1,6 +1,6 @@
 ---
 title: "Order of Operations in Quantum Computing"
-date: 2025-07-07T12:00:00-01:00
+date: 2025-07-06T12:00:00-01:00
 categories:
   - blog
 tags:
