@@ -74,7 +74,7 @@ author:
       url: "https://github.com/MarcusSkynet"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "www.linkedin.com/in/marekh"
+      url: "https://linkedin.com/in/marekh"
 
 footer:
   links:
@@ -86,7 +86,7 @@ footer:
       url: "https://github.com/MarcusSkynet"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "www.linkedin.com/in/marekh"
+      url: "https://linkedin.com/in/marekh"
 
 defaults:
   # _posts
