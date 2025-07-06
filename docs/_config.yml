@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: On Tides of Uncertainty 
-email:
+email: marek@tidesofuncertainty.com
 description: >- # this means to ignore newlines until "baseurl:"
    the site is under construction feed.xml site description.
-twitter_username: username
-github_username: username
+# twitter_username: username
+github_username: MarcusSkynet
 minimal_mistakes_skin: dark
 search: true
 
@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Skynet"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/qubit.jpg"
   bio    : "Sailing Tides of Uncertainty"
   # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with Dimensional Collapse Theory while trying to understand something else entirely. The universe is weird. So am I.
   # Quantum computing enthusiast. Independent theorist. Accidentally explained black holes with DCT while trying to understand something else entirely - It got a little out of hand. The universe is weird. So am I.
@@ -65,28 +65,28 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://http://tidesofuncertainty.com/"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/MarcusSkynet"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/marekh"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/MarcusSkynet"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/marekh"
 
 defaults:
   # _posts
