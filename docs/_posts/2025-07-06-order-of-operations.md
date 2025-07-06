@@ -1,5 +1,5 @@
 ---
-title: "Order of Operations in Quantum Computing"
+title: "🚀 Order of Operations in Quantum Computing"
 date: 2025-07-06T12:00:00-01:00
 categories:
   - blog
@@ -7,8 +7,6 @@ tags:
   - quantum computing
   - linear algebra
 ---
-
-# 🚀 Order of Operations in Quantum Computing
 
 Quantum information cannot *choose* the order in which it evolves  -  its trajectory is dictated by the mathematics of unitary operators, tensor structure, and, ultimately, the laws of physics.  Getting that order wrong is the quickest path to broken interference patterns, lost entanglement, or outright classical behaviour.  The following guide expands and refines the core principles, adding practical context from compilation, noise theory, and contemporary algorithms.
 
