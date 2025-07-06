@@ -46,7 +46,7 @@ Because matrix multiplication is not commutative, the product defines a *strict 
 
 ## 3  Tensor Products: Where Qubits Live in the Vector
 
-The $n$‑qubit state space is $\bigl(\mathbb C^2\bigr)^{\otimes n}$; basis vectors are written $|q_{n-1}\cdots q_0\rangle$.  Most text books (and Qiskit) treat $q_0$ as the *least significant* qubit, hence it occupies the **rightmost** Kronecker factor even though it is often drawn on the *top wire*.  Remembering the mapping
+The $n$‑qubit state space is $\bigl(\mathbb C^2\bigr)^{\otimes n}$ \; basis vectors are written $|q_{n-1}\cdots q_0\rangle$.  Most text books (and Qiskit) treat $q_0$ as the *least significant* qubit, hence it occupies the **rightmost** Kronecker factor even though it is often drawn on the *top wire*.  Remembering the mapping
 
 $$
 |q_{n-1}\cdots q_0\rangle \longleftrightarrow e_{q_{n-1}} \otimes \cdots \otimes e_{q_0}
