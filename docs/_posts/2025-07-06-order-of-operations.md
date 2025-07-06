@@ -82,7 +82,7 @@ $$
 U^\dagger = U_1^\dagger U_2^\dagger \cdots U_n^\dagger.
 $$
 
-In algorithm design this is not a luxury but a necessity.  **Uncomputation**  -  reversing ancilla‑producing subroutines  -  restores scratch qubits to $|0\rangle$, preventing garbage entanglement from leaking into later steps or measurement statistics.  The discipline mirrors classical compiler practice (freeing heap objects), except the stakes are higher: stray phase correlations can corrupt the entire wavefunction.
+In algorithm design this is not a luxury but a necessity.  **Uncomputation**  -  reversing ancilla‑producing subroutines  -  restores scratch qubits to \$|0\rangle\$, preventing garbage entanglement from leaking into later steps or measurement statistics.  The discipline mirrors classical compiler practice (freeing heap objects), except the stakes are higher: stray phase correlations can corrupt the entire wavefunction.
 
 ---
 
