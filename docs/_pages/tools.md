@@ -1,6 +1,6 @@
 ---
-permalink: /software/
-title: "Software, Simulations, and Reproducibility"
+permalink: /tools/
+title: "Tools, Simulations, and Reproducibility"
 layout: single
 ---
 
