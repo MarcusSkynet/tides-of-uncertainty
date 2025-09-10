@@ -1,65 +1,83 @@
-/* === Quantum Refined Theme (Readable & Elegant) === */
+/* === Cosmic Ledger Theme v1.0 === */
+/* A theme for tidesofuncertainty.com */
 
-/* Overall body */
+/* --- 1. Main Body and Text --- */
+/* This sets the global background and default text color. */
 body {
-  background: #0D0D1A; /*linear-gradient(to bottom, #21053b, #150d26);*/
-  color: #F0F0F0;/*#e6e9f0;*/
+  background-color: #0D0D1A; /* Deep Midnight Blue */
+  color: #F0F0F0;          /* Starlight (Off-White) */
 }
 
-/* Headings */
+/* --- 2. Headings (h1, h2, etc.) --- */
+/* This defines the color for all section titles. */
 h1, h2, h3, h4, h5, h6 {
-  color: #9D80FF; /*#b78aff;*/
+  color: #9D80FF; /* Deep Violet */
 }
 
-/* Links */
+/* --- 3. Hyperlinks --- */
+/* This styles all clickable links. */
 a {
-  color: #60A5FA; /*#64ffe0;*/
-  text-decoration: none;
+  color: #60A5FA; /* Quantum Blue */
+  text-decoration: none; /* Removes the default underline */
 }
+
+/* This is the color that links will turn when you hover over them. */
 a:hover {
-  color: #FBBF24; /*#dda0ff;*/
+  color: #FBBF24; /* Supernova Gold */
 }
 
-/* Code blocks */
+/* --- 4. Code Blocks and Inline Code --- */
+/* This styles the appearance of code snippets. */
 code, pre {
-  background-color: #221633;
-  color: #8ef2ca;
-  border-left: 4px solid #3affb3;
+  background-color: #1A1A2A; /* A slightly lighter shade of the background */
+  color: #9D80FF;          /* Using the main violet for code text */
+  border-left: 3px solid #60A5FA; /* A Quantum Blue accent bar */
   padding: 0.2em 0.5em;
+  font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace; /* Standard coding fonts */
 }
 
-/* Footer */
-.page__footer {
-  background-color: #0D0D1A;
-  color: #aaa;
-}
+/* --- 5. Site Header & Navigation --- */
+/* This section controls the very top of your site. */
 
-/* Header */
+/* The main header bar */
 .site-header {
-  background-color: #0D0D1A; /*rgba(21, 13, 38, 0.9);*/
-  border-bottom: 1px solid #0D0D1A;
+  background-color: #0D0D1A; /* Match the body's Deep Midnight Blue */
+  border-bottom: 1px solid #1A1A2A; /* A subtle, slightly lighter border */
 }
 
-/* Nav bar background fix */
+/* This makes sure the navigation menu itself doesn't have a weird background color. */
 .greedy-nav {
   background: transparent !important;
 }
 
-/* Force header/nav text styling */
+/* This is a powerful "catch-all" to style all text in the header. */
+/* It targets the main wrapper, the site title, and all navigation links. */
 .masthead__inner-wrap,
 .masthead__inner-wrap a,
 .masthead__inner-wrap a:visited,
 .site-title,
 .site-title a,
+.site-title a:visited,
 .greedy-nav a,
 .site-nav .page-link {
-  color: #eae6f7 !important;
+  color: #E5E5E5 !important; /* Use the slightly softer Starlight white */
   background: none !important;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 5px rgba(157, 128, 255, 0.3); /* A subtle violet glow */
 }
 
+/* This controls the hover effect for all navigation links. */
 .masthead__inner-wrap a:hover,
 .greedy-nav a:hover,
 .site-nav .page-link:hover {
-  color: #ffdd57 !important;
+  color: #FBBF24 !important; /* Supernova Gold */
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.5); /* A brighter gold glow on hover */
+}
+
+
+/* --- 6. Footer --- */
+/* This styles the very bottom of your site. */
+.page__footer {
+  background-color: #0D0D1A; /* Match the body background */
+  color: #888888;          /* A muted gray for less important text */
+  border-top: 1px solid #1A1A2A; /* A subtle border to separate it */
 }
