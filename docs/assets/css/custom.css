@@ -17,7 +17,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #dda0ff;
+  color: #FBBF24; /*#dda0ff;*/
 }
 
 /* Code blocks */
@@ -30,14 +30,14 @@ code, pre {
 
 /* Footer */
 .page__footer {
-  background-color: #0c0615;
+  background-color: #0D0D1A;
   color: #aaa;
 }
 
 /* Header */
 .site-header {
-  background-color: rgba(21, 13, 38, 0.9);
-  border-bottom: 1px solid #3f2a55;
+  background-color: #0D0D1A; /*rgba(21, 13, 38, 0.9);*/
+  border-bottom: 1px solid #0D0D1A;
 }
 
 /* Nav bar background fix */
